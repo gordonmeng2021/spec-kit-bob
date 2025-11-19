@@ -59,6 +59,7 @@ NEW_PLAN="$IMPL_PLAN"  # Alias for compatibility with existing code
 AGENT_TYPE="${1:-}"
 
 # Agent-specific file paths  
+BOB_FILE="$REPO_ROOT/.bob/rules/specify-rules.mdc"
 CLAUDE_FILE="$REPO_ROOT/CLAUDE.md"
 GEMINI_FILE="$REPO_ROOT/GEMINI.md"
 COPILOT_FILE="$REPO_ROOT/.github/agents/copilot-instructions.md"
@@ -583,6 +584,9 @@ update_specific_agent() {
         claude)
             update_agent_file "$CLAUDE_FILE" "Claude Code"
             ;;
+        bob)
+            update_agent_file "$BOB_FILE" "Bob IDE"
+            ;;
         gemini)
             update_agent_file "$GEMINI_FILE" "Gemini CLI"
             ;;
@@ -644,6 +648,11 @@ update_all_existing_agents() {
     
     if [[ -f "$GEMINI_FILE" ]]; then
         update_agent_file "$GEMINI_FILE" "Gemini CLI"
+        found_agent=true
+    fi
+    
+    if [[ -f "$BOB_FILE" ]]; then
+        update_agent_file "$BOB_FILE" "Bob IDE"
         found_agent=true
     fi
     
