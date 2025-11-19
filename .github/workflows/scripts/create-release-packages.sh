@@ -177,6 +177,9 @@ build_variant() {
     cursor-agent)
       mkdir -p "$base_dir/.cursor/commands"
       generate_commands cursor-agent md "\$ARGUMENTS" "$base_dir/.cursor/commands" "$script" ;;
+    bob-agent)
+      mkdir -p "$base_dir/.bob/commands"
+      generate_commands bob-agent md "\$ARGUMENTS" "$base_dir/.bob/commands" "$script" ;;
     qwen)
       mkdir -p "$base_dir/.qwen/commands"
       generate_commands qwen toml "{{args}}" "$base_dir/.qwen/commands" "$script"
@@ -217,7 +220,7 @@ build_variant() {
 }
 
 # Determine agent list
-ALL_AGENTS=(claude gemini copilot cursor-agent qwen opencode windsurf codex kilocode auggie roo codebuddy amp shai q)
+ALL_AGENTS=(claude gemini copilot cursor-agent bob-agent qwen opencode windsurf codex kilocode auggie roo codebuddy amp shai q)
 ALL_SCRIPTS=(sh ps)
 
 norm_list() {
