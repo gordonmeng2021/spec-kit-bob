@@ -23,6 +23,7 @@ gh release create "$VERSION" \
   .genreleases/spec-kit-template-gemini-sh-"$VERSION".zip \
   .genreleases/spec-kit-template-gemini-ps-"$VERSION".zip \
   .genreleases/spec-kit-template-cursor-agent-sh-"$VERSION".zip \
+  .genreleases/spec-kit-template-bob-agent-sh-"$VERSION".zip \
   .genreleases/spec-kit-template-cursor-agent-ps-"$VERSION".zip \
   .genreleases/spec-kit-template-opencode-sh-"$VERSION".zip \
   .genreleases/spec-kit-template-opencode-ps-"$VERSION".zip \
