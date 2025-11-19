@@ -148,6 +148,12 @@ AGENT_CONFIG = {
         "install_url": None,  # IDE-based
         "requires_cli": False,
     },
+    "bob-agent": {
+        "name": "Bob",
+        "folder": ".bob/",
+        "install_url": None,  # IDE-based
+        "requires_cli": False,
+    },
     "qwen": {
         "name": "Qwen Code",
         "folder": ".qwen/",
